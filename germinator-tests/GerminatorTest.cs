@@ -8,7 +8,7 @@ namespace germinator_tests
         [Test]
         public void SingleLoopPerimiterOfFourByFourGrid_Cleans12Tiles()
         {
-            var germinator = new Germinator(0, 0);
+            var germinator = new Germinator();
             germinator.Move('N', 3);
             germinator.Move('E', 3);
             germinator.Move('S', 3);
@@ -20,7 +20,7 @@ namespace germinator_tests
         [Test]
         public void DoubleLoopPerimiterOfFourByFourGrid_Cleans12Tiles()
         {
-            var germinator = new Germinator(0, 0);
+            var germinator = new Germinator();
             germinator.Move('N', 3);
             germinator.Move('E', 3);
             germinator.Move('S', 3);
@@ -44,7 +44,7 @@ namespace germinator_tests
         [TestCase('E', 'S', 5, ExpectedResult = 11)]
         public int PerformsTwoActions_CleansAsExpected(char firstDirection, char secondDirection, int numberOfSteps)
         {
-            var germinator = new Germinator(0, 0);
+            var germinator = new Germinator();
             germinator.Move(firstDirection, numberOfSteps);
             germinator.Move(secondDirection, numberOfSteps);
 
@@ -54,7 +54,7 @@ namespace germinator_tests
         [Test]
         public void NoCommandsGiven_CleansInitialTile()
         {
-            var germinator = new Germinator(0, 0);
+            var germinator = new Germinator();
             var tilesCleaned = germinator.NumberOfTilesCleaned;
             Assert.AreEqual(tilesCleaned, 1);
         }

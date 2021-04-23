@@ -9,11 +9,9 @@ namespace germinator
         {
             var numberOfCommands = int.Parse(Console.ReadLine());
 
-            var startingCoordinates = Console.ReadLine().Split(" ");
-            var startX = int.Parse(startingCoordinates[0]);
-            var startY = int.Parse(startingCoordinates[1]);
+            var unusedstartingCoordinates = Console.ReadLine();
 
-            var germinator = new Germinator(startX, startY);
+            var germinator = new Germinator();
 
             for (int i = 0; i < numberOfCommands; i++)
             {

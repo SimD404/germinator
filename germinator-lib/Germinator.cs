@@ -8,10 +8,9 @@ namespace germinator_lib
         private ValueTuple<int, int> _currentPosition;
         private HashSet<ValueTuple<int, int>> _cleanedTiles = new HashSet<ValueTuple<int, int>>();
 
-		
-        public Germinator(int startX, int startY)
+        public Germinator()
         {
-            EnterTile(startX, startY);
+            EnterTile(0, 0);
         }
 
         public int NumberOfTilesCleaned => _cleanedTiles.Count;
